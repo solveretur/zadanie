@@ -2,7 +2,7 @@ package com.brzezinski.zadanie.downloadtask
 
 import scala.io.Source
 
-trait JsonMapper {
+private[downloadtask] trait JsonMapper {
   def parseRawJsonString(rawJson: String): DownloadTask
 
   def readFromFile(filename: String): DownloadTask = {

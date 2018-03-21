@@ -5,7 +5,7 @@ import java.net.URL
 
 import scala.sys.process._
 
-object FileDownloader {
+private[downloadtask] object FileDownloader {
 
   def download(task: DownloadTask): String = {
     def downloadFile(filename: String, fileUrl: String) = {
