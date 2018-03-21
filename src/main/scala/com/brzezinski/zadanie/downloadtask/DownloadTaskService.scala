@@ -4,7 +4,7 @@ object DownloadTaskService {
 
   def createDownloadTaskFromFile(fileName: String): DownloadTask = {
     val taskJsonMapper = DownloadTaskJsonMapper
-    taskJsonMapper.read(fileName)
+    taskJsonMapper.readFromFile(fileName)
   }
 
   def downloadFiles(downloadTask: DownloadTask): String = {

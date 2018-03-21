@@ -1,5 +1,12 @@
 package com.brzezinski.zadanie.downloadtask
 
+import scala.io.Source
+
 trait JsonMapper {
-  def read(filename: String): DownloadTask
+  def parseRawJsonString(rawJson: String): DownloadTask
+
+  def readFromFile(filename: String): DownloadTask = {
+    val source = Source.fromFile(filename)
+    parseRawJsonString(source.mkString)
+  }
 }
