@@ -1,8 +1,5 @@
 package com.brzezinski.zadanie {
-
-  import com.typesafe.scalalogging.LazyLogging
-
-
+  
   object Main {
 
     import java.util.concurrent.{ScheduledThreadPoolExecutor, TimeUnit}
@@ -96,7 +93,7 @@ package com.brzezinski.zadanie {
     }
 
 
-    class Monitor(checkSums: Map[File, String]) extends Runnable with LazyLogging {
+    class Monitor(checkSums: Map[File, String]) extends Runnable {
       override def run(): Unit = {
         for ((k, v) <- checkSums) {
           val newHash = MD5Hasher.computeHash(k)
