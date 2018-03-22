@@ -1,10 +1,11 @@
 package com.brzezinski.zadanie.checksum
 
-import java.io.{File, FileInputStream}
+import java.io.{File, FileInputStream, FileNotFoundException}
 import java.security.{DigestInputStream, MessageDigest}
 
 object MD5CheckSumCounter {
 
+  @throws(classOf[FileNotFoundException])
   def computeMD5CheckSumForFile(file: File): String = {
     val buffer = new Array[Byte](8192)
     val md5 = MessageDigest.getInstance("MD5")
