@@ -3,7 +3,7 @@ package com.brzezinski.zadanie.downloadtask
 import org.json4s._
 import org.json4s.jackson.JsonMethods._
 
-private[downloadtask] object DownloadTaskJsonMapper  extends JsonMapper {
+private[downloadtask] object DownloadTaskJsonMapper extends JsonMapper {
 
   implicit val formats: DefaultFormats.type = DefaultFormats
 

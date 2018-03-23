@@ -1,0 +1,7 @@
+{
+  "downloadDir": "path",
+  "files": {
+    "nazwa": "url",
+    "nazwa2": "url2"
+  }
+}
